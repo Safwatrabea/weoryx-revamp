@@ -1731,6 +1731,125 @@ h4 {
     margin-bottom: 50px !important;
 }
 
-.hidden {
-    display: none !important;
-}.video-section{padding:80px 0}.video-container{max-width:600px;margin:0 auto;border-radius:16px;overflow:hidden}.video-thumbnail{width:100%;max-height:350px;object-fit:cover}.video-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.3)}.play-button{width:60px;height:60px;background:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#1A5F7A;font-size:1.3rem}.reels-section{padding:80px 0;background:#f8f9fa}.reels-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;max-width:900px;margin:40px auto 0}.reel-item{border-radius:12px;overflow:hidden;aspect-ratio:9/16;max-height:280px;position:relative}.reel-item img{width:100%;height:100%;object-fit:cover}.reel-play-icon{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:40px;height:40px;background:rgba(255,255,255,.25);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff}
+/* ======================================
+   Reels Section (Modern Swiper Slider)
+   ====================================== */
+.reels-section {
+    padding: var(--section-padding);
+    background: var(--off-white);
+    overflow: hidden;
+    position: relative;
+}
+
+.reels-section .container-fluid {
+    padding: 0 40px;
+}
+
+.reels-swiper {
+    padding: 20px 0 50px !important;
+}
+
+.reel-item {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    aspect-ratio: 9/16;
+    background: var(--black);
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition-normal);
+    cursor: pointer;
+    width: 100%;
+}
+
+.reel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+    transition: var(--transition-normal);
+}
+
+.reel-item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+}
+
+.reel-item:hover img {
+    opacity: 0.7;
+    transform: scale(1.05);
+}
+
+.reel-play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-size: 1.5rem;
+    transition: var(--transition-normal);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    z-index: 2;
+}
+
+.reel-item:hover .reel-play-icon {
+    background: var(--accent-orange);
+    border-color: var(--accent-orange);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Swiper Navigation Custom Styles */
+.reels-section .swiper-button-next,
+.reels-section .swiper-button-prev {
+    width: 50px;
+    height: 50px;
+    background: var(--white);
+    border-radius: 50%;
+    box-shadow: var(--shadow-md);
+    color: var(--primary-blue);
+    transition: var(--transition-normal);
+}
+
+.reels-section .swiper-button-next:after,
+.reels-section .swiper-button-prev:after {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.reels-section .swiper-button-next:hover,
+.reels-section .swiper-button-prev:hover {
+    background: var(--accent-orange);
+    color: var(--white);
+}
+
+.reels-section .swiper-pagination-bullet-active {
+    background: var(--accent-orange);
+}
+
+/* Video Marketing Thumbnail Adjustment */
+.video-section {
+    padding: var(--section-padding);
+    background: var(--white);
+}
+
+.video-container {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    position: relative;
+}
+
+.video-thumbnail {
+    width: 100%;
+    height: auto;
+    display: block;
+}

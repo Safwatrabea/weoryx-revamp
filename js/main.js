@@ -52,6 +52,44 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // ===============================
+    // Initialize Reels Swiper
+    // ===============================
+    const reelsSwiper = new Swiper('.reels-swiper', {
+        slidesPerView: 1.5,
+        spaceBetween: 20,
+        centeredSlides: false,
+        loop: false,
+        grabCursor: true,
+        navigation: {
+            nextEl: '.reels-section .swiper-button-next',
+            prevEl: '.reels-section .swiper-button-prev',
+        },
+        pagination: {
+            el: '.reels-section .swiper-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            480: {
+                slidesPerView: 2.5,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 3.5,
+                spaceBetween: 25,
+            },
+            1024: {
+                slidesPerView: 4.5,
+                spaceBetween: 30,
+            },
+            1400: {
+                slidesPerView: 5.5,
+                spaceBetween: 30,
+            }
+        }
+    });
+
+
+    // ===============================
     // Header Scroll Effect
     // ===============================
     const header = document.getElementById('header');

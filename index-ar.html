@@ -190,49 +190,62 @@
 
     <!-- Reels Section -->
     <section class="reels-section">
-        <div class="container">
+        <div class="container-fluid">
             <div class="section-header text-center" data-aos="fade-up">
                 <span class="section-tag section-tag-center">أحدث المحتوى</span>
                 <h2 class="section-title">شاهد <span class="text-primary">قصصنا</span></h2>
             </div>
-            <div class="reels-grid"
-                style="display:flex;gap:15px;overflow-x:auto;scroll-snap-type:x mandatory;padding:15px 0;-webkit-overflow-scrolling:touch;">
-                <!-- Reel 1 -->
-                <div class="reel-item" style="min-width:180px;flex-shrink:0;scroll-snap-align:center;max-height:320px;"
-                    data-aos="fade-up" data-aos-delay="100">
-                    <img src="images/reels-placeholder.png" alt="Reel 1">
-                    <div class="reel-play-icon"><i class="fas fa-play"></i></div>
+
+            <div class="swiper reels-swiper" data-aos="fade-up">
+                <div class="swiper-wrapper">
+                    <!-- Reel 1 -->
+                    <div class="swiper-slide">
+                        <div class="reel-item">
+                            <img src="images/reels-placeholder.png" alt="Reel 1">
+                            <div class="reel-play-icon"><i class="fas fa-play"></i></div>
+                        </div>
+                    </div>
+                    <!-- Reel 2 -->
+                    <div class="swiper-slide">
+                        <div class="reel-item">
+                            <img src="images/reels_placeholder.png" alt="Reel 2">
+                            <div class="reel-play-icon"><i class="fas fa-play"></i></div>
+                        </div>
+                    </div>
+                    <!-- Reel 3 -->
+                    <div class="swiper-slide">
+                        <div class="reel-item">
+                            <img src="images/reels_placeholder.png" alt="Reel 3">
+                            <div class="reel-play-icon"><i class="fas fa-play"></i></div>
+                        </div>
+                    </div>
+                    <!-- Reel 4 -->
+                    <div class="swiper-slide">
+                        <div class="reel-item">
+                            <img src="images/reels_placeholder.png" alt="Reel 4">
+                            <div class="reel-play-icon"><i class="fas fa-play"></i></div>
+                        </div>
+                    </div>
+                    <!-- Reel 5 -->
+                    <div class="swiper-slide">
+                        <div class="reel-item">
+                            <img src="images/reels_placeholder.png" alt="Reel 5">
+                            <div class="reel-play-icon"><i class="fas fa-play"></i></div>
+                        </div>
+                    </div>
+                    <!-- Reel 6 -->
+                    <div class="swiper-slide">
+                        <div class="reel-item">
+                            <img src="images/reels_placeholder.png" alt="Reel 6">
+                            <div class="reel-play-icon"><i class="fas fa-play"></i></div>
+                        </div>
+                    </div>
                 </div>
-                <!-- Reel 2 -->
-                <div class="reel-item" style="min-width:180px;flex-shrink:0;scroll-snap-align:center;max-height:320px;"
-                    data-aos="fade-up" data-aos-delay="150">
-                    <img src="images/reels-placeholder.png" alt="Reel 2">
-                    <div class="reel-play-icon"><i class="fas fa-play"></i></div>
-                </div>
-                <!-- Reel 3 -->
-                <div class="reel-item" style="min-width:180px;flex-shrink:0;scroll-snap-align:center;max-height:320px;"
-                    data-aos="fade-up" data-aos-delay="200">
-                    <img src="images/reels-placeholder.png" alt="Reel 3">
-                    <div class="reel-play-icon"><i class="fas fa-play"></i></div>
-                </div>
-                <!-- Reel 4 -->
-                <div class="reel-item" style="min-width:180px;flex-shrink:0;scroll-snap-align:center;max-height:320px;"
-                    data-aos="fade-up" data-aos-delay="250">
-                    <img src="images/reels-placeholder.png" alt="Reel 4">
-                    <div class="reel-play-icon"><i class="fas fa-play"></i></div>
-                </div>
-                <!-- Reel 5 -->
-                <div class="reel-item" style="min-width:180px;flex-shrink:0;scroll-snap-align:center;max-height:320px;"
-                    data-aos="fade-up" data-aos-delay="300">
-                    <img src="images/reels-placeholder.png" alt="Reel 5">
-                    <div class="reel-play-icon"><i class="fas fa-play"></i></div>
-                </div>
-                <!-- Reel 6 -->
-                <div class="reel-item" style="min-width:180px;flex-shrink:0;scroll-snap-align:center;max-height:320px;"
-                    data-aos="fade-up" data-aos-delay="350">
-                    <img src="images/reels-placeholder.png" alt="Reel 6">
-                    <div class="reel-play-icon"><i class="fas fa-play"></i></div>
-                </div>
+                <!-- Navigation -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <!-- Pagination -->
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
