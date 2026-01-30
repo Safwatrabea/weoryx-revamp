@@ -419,3 +419,19 @@ body {
         transform: translateX(50%);
     }
 }
+
+/* ======================================
+   Offer Section RTL
+   ====================================== */
+.offer-price {
+    left: auto;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+/* ======================================
+   CTA Section RTL
+   ====================================== */
+.cta-buttons {
+    flex-direction: row-reverse;
+}
