@@ -1,0 +1,391 @@
+/* ======================================
+   WeOryx - RTL (Right-to-Left) Styles
+   Arabic Version
+   ====================================== */
+
+/* Arabic Font Override */
+:root {
+    --font-family: 'Cairo', 'Poppins', sans-serif;
+}
+
+body {
+    direction: rtl;
+    text-align: right;
+    font-family: var(--font-family);
+}
+
+/* ======================================
+   Header RTL
+   ====================================== */
+.nav-menu {
+    flex-direction: row-reverse;
+}
+
+.nav-actions {
+    flex-direction: row-reverse;
+}
+
+.nav-link::after {
+    left: auto;
+    right: 0;
+}
+
+.lang-toggle {
+    flex-direction: row-reverse;
+}
+
+/* ======================================
+   Hero RTL
+   ====================================== */
+.hero-content {
+    direction: rtl;
+}
+
+.hero-text {
+    padding-right: 0;
+    padding-left: 40px;
+    text-align: right;
+}
+
+.hero-curve {
+    clip-path: ellipse(85% 100% at 70% 0%);
+}
+
+/* Floating Elements - Mirror positions */
+.floating-chat {
+    right: auto;
+    left: 20%;
+}
+
+.floating-heart {
+    right: auto;
+    left: 5%;
+}
+
+.floating-like {
+    left: auto;
+    right: 15%;
+}
+
+.floating-target {
+    left: auto;
+    right: 0;
+}
+
+.floating-chart {
+    left: auto;
+    right: 10%;
+}
+
+/* ======================================
+   Section Headers RTL
+   ====================================== */
+.section-tag {
+    display: inline-block;
+}
+
+.section-tag-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ======================================
+   About Section RTL
+   ====================================== */
+.about-grid {
+    direction: rtl;
+}
+
+.about-image-decoration {
+    left: auto;
+    right: -20px;
+}
+
+.feature-item {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.feature-content {
+    text-align: right;
+}
+
+/* ======================================
+   Services RTL
+   ====================================== */
+.service-card {
+    text-align: right;
+}
+
+.service-link {
+    flex-direction: row-reverse;
+}
+
+.service-link i {
+    transform: rotate(180deg);
+}
+
+/* ======================================
+   Portfolio RTL
+   ====================================== */
+.portfolio-overlay {
+    text-align: right;
+}
+
+.portfolio-link {
+    right: auto;
+    left: 20px;
+    transform: rotate(135deg);
+}
+
+/* ======================================
+   Testimonials RTL
+   ====================================== */
+.testimonial-author {
+    flex-direction: row-reverse;
+}
+
+.author-avatar {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    min-height: 60px;
+    max-width: 60px;
+    max-height: 60px;
+    object-fit: cover;
+}
+
+.author-info {
+    text-align: right;
+}
+
+.testimonial-content {
+    text-align: right;
+}
+
+/* ======================================
+   Blog RTL
+   ====================================== */
+.blog-meta {
+    flex-direction: row-reverse;
+}
+
+.blog-meta span {
+    flex-direction: row-reverse;
+}
+
+.blog-content {
+    text-align: right;
+}
+
+.blog-link {
+    flex-direction: row-reverse;
+}
+
+.blog-link i {
+    transform: rotate(180deg);
+}
+
+.blog-category {
+    left: auto;
+    right: 15px;
+}
+
+/* ======================================
+   CTA RTL
+   ====================================== */
+.cta-buttons {
+    flex-direction: row-reverse;
+}
+
+.cta-buttons .btn i {
+    margin-left: 0;
+    margin-right: 8px;
+}
+
+/* ======================================
+   Footer RTL
+   ====================================== */
+.footer-grid {
+    direction: rtl;
+}
+
+.footer-brand {
+    text-align: right;
+}
+
+.footer-social {
+    justify-content: flex-start;
+}
+
+.footer-links ul {
+    text-align: right;
+}
+
+.footer-links a:hover {
+    padding-left: 0;
+    padding-right: 5px;
+}
+
+.contact-list li {
+    flex-direction: row-reverse;
+}
+
+.contact-list i {
+    margin-left: 12px;
+    margin-right: 0;
+}
+
+.footer-bottom .container {
+    flex-direction: row-reverse;
+}
+
+.footer-bottom-links {
+    flex-direction: row-reverse;
+}
+
+/* ======================================
+   Breadcrumb RTL
+   ====================================== */
+.page-breadcrumb {
+    flex-direction: row-reverse;
+}
+
+.page-breadcrumb i {
+    transform: rotate(180deg);
+}
+
+/* ======================================
+   About Page RTL
+   ====================================== */
+.about-story-grid {
+    direction: rtl;
+}
+
+.about-story-badge {
+    right: auto;
+    left: -30px;
+}
+
+.story-feature {
+    flex-direction: row-reverse;
+}
+
+.why-card {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.team-info {
+    text-align: center;
+}
+
+/* ======================================
+   Services Page RTL
+   ====================================== */
+.service-detail {
+    direction: rtl;
+}
+
+.service-features li {
+    flex-direction: row-reverse;
+}
+
+.process-step::after {
+    right: auto;
+    left: -15px;
+}
+
+/* ======================================
+   Contact Page RTL
+   ====================================== */
+.contact-grid {
+    direction: rtl;
+}
+
+.contact-info-item {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.contact-info-content {
+    text-align: right;
+}
+
+.contact-social .social-links {
+    justify-content: flex-start;
+}
+
+.contact-form label {
+    text-align: right;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    text-align: right;
+}
+
+/* ======================================
+   Pricing/Offers RTL
+   ====================================== */
+.pricing-features li {
+    flex-direction: row-reverse;
+}
+
+/* ======================================
+   Buttons RTL
+   ====================================== */
+.btn i {
+    margin-left: 0;
+    margin-right: 8px;
+}
+
+.btn-outline-primary i,
+.btn-primary i {
+    transform: rotate(180deg);
+}
+
+/* ======================================
+   Back to Top RTL
+   ====================================== */
+.back-to-top {
+    right: auto;
+    left: 30px;
+}
+
+/* ======================================
+   Mobile Menu RTL
+   ====================================== */
+@media (max-width: 992px) {
+    .nav-menu {
+        right: auto;
+        left: -300px;
+    }
+
+    .nav-menu.active {
+        left: 0;
+        right: auto;
+    }
+
+    .hero-text {
+        padding-left: 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-story-badge {
+        left: 20px;
+        right: auto;
+    }
+
+    .footer-brand,
+    .footer-links ul {
+        text-align: center;
+    }
+
+    .footer-social {
+        justify-content: center;
+    }
+}

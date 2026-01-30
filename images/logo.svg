@@ -1,0 +1,5 @@
+<svg width="130" height="40" viewBox="0 0 130 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M10 8L18 32H22L26 20L30 32H34L42 8H38L32 26L28 14H24L20 26L14 8H10Z" fill="#1A5F7A"/>
+  <text x="48" y="28" font-family="Poppins, Arial, sans-serif" font-size="20" font-weight="700" fill="#1A5F7A">WeOryx</text>
+  <circle cx="125" cy="20" r="4" fill="#E85A3C"/>
+</svg>
