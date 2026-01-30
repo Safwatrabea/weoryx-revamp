@@ -993,6 +993,82 @@ h4 {
     opacity: 0.9;
 }
 
+
+/* ======================================
+   Clients Section
+   ====================================== */
+.clients {
+    padding: var(--section-padding);
+    background: var(--white);
+}
+
+.clients-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.clients-carousel {
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+}
+
+.clients-carousel::before,
+.clients-carousel::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 2;
+}
+
+.clients-carousel::before {
+    left: 0;
+    background: linear-gradient(90deg, var(--white), transparent);
+}
+
+.clients-carousel::after {
+    right: 0;
+    background: linear-gradient(-90deg, var(--white), transparent);
+}
+
+.clients-track {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.client-logo {
+    flex-shrink: 0;
+}
+
+.client-logo img {
+    height: 60px !important;
+    width: auto !important;
+    filter: grayscale(100%);
+    opacity: 0.5;
+    transition: var(--transition-normal);
+}
+
+.client-logo:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
 /* ======================================
    Testimonials Section
    ====================================== */

@@ -389,3 +389,33 @@ body {
         justify-content: center;
     }
 }
+
+/* ======================================
+   Clients Section RTL
+   ====================================== */
+.clients-carousel::before {
+    left: auto;
+    right: 0;
+    background: linear-gradient(-90deg, var(--white), transparent);
+}
+
+.clients-carousel::after {
+    right: auto;
+    left: 0;
+    background: linear-gradient(90deg, var(--white), transparent);
+}
+
+.clients-track {
+    flex-direction: row;
+    animation: scroll-rtl 40s linear infinite;
+}
+
+@keyframes scroll-rtl {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(50%);
+    }
+}
