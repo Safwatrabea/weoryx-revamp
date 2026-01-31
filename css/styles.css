@@ -1086,8 +1086,8 @@ h4 {
 .client-logo img {
     height: 60px !important;
     width: auto !important;
-    filter: grayscale(100%);
-    opacity: 0.5;
+    filter: grayscale(30%);
+    opacity: 0.85;
     transition: var(--transition-normal);
 }
 
@@ -1702,10 +1702,16 @@ h4 {
         box-shadow: var(--shadow-xl);
         transition: var(--transition-normal);
         z-index: 1001;
+        overflow: hidden;
     }
 
     .nav-menu.active {
         right: 0;
+    }
+
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .nav-link {
@@ -1778,11 +1784,22 @@ h4 {
 @media (max-width: 768px) {
     :root {
         --section-padding: 70px 0;
+        --container-padding: 0 24px;
+    }
+
+    .container {
+        padding-left: 24px;
+        padding-right: 24px;
     }
 
     .hero {
         min-height: auto;
         padding: 120px 0 80px;
+    }
+
+    .hero .container {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .hero-content {
@@ -1796,6 +1813,21 @@ h4 {
 
     .hero-image-wrapper {
         max-width: 350px;
+        margin: 0 auto;
+    }
+
+    /* Fix partners/clients section visibility */
+    .clients {
+        padding: 60px 0;
+    }
+
+    .client-logo img {
+        filter: grayscale(0%);
+        opacity: 1;
+    }
+
+    .clients-track {
+        gap: 40px;
     }
 
     .floating-element {

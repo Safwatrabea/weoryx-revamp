@@ -360,17 +360,25 @@ body {
 @media (max-width: 992px) {
     .nav-menu {
         right: auto;
-        left: -300px;
+        left: -100%;
+        overflow: hidden;
+        visibility: hidden;
     }
 
     .nav-menu.active {
         left: 0;
         right: auto;
+        visibility: visible;
     }
 
     .hero-text {
         padding-left: 0;
         text-align: center;
+    }
+
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
@@ -387,6 +395,31 @@ body {
 
     .footer-social {
         justify-content: center;
+    }
+
+    .hero-text {
+        padding: 0 16px;
+    }
+
+    .hero-content {
+        padding: 20px 0;
+    }
+
+    /* Better mobile container padding */
+    .container {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    /* Ensure clients logos are visible on mobile */
+    .client-logo img {
+        filter: grayscale(0%) !important;
+        opacity: 1 !important;
+    }
+
+    /* Body overflow fix */
+    body {
+        overflow-x: hidden;
     }
 }
 
