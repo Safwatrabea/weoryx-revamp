@@ -8,10 +8,13 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initialize AOS
     // ===============================
     AOS.init({
-        duration: 800,
+        duration: 600,
         easing: 'ease-out',
         once: true,
-        offset: 50
+        offset: 0,
+        delay: 0,
+        anchorPlacement: 'top-bottom',
+        disable: window.innerWidth < 768 // Disable on mobile for better performance
     });
 
     // ===============================
@@ -90,15 +93,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     // ===============================
-    // Header Scroll Effect
+    // Header Scroll Effect & Logo Switch
     // ===============================
     const header = document.getElementById('header');
+    const logoImg = document.querySelector('.logo-img');
 
     function handleScroll() {
         if (window.scrollY > 50) {
             header.classList.add('scrolled');
+            // Switch to colored logo on scrolled/sticky header
+            if (logoImg) {
+                logoImg.src = 'images/logo.svg';
+            }
         } else {
             header.classList.remove('scrolled');
+            // Switch back to white logo on transparent header
+            if (logoImg) {
+                logoImg.src = 'images/logo-white.svg';
+            }
         }
     }
 

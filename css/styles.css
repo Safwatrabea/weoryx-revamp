@@ -2030,3 +2030,39 @@ h4 {
     height: auto;
     display: block;
 }
+
+/* ======================================
+   AOS Animation Fallback & Fixes
+   ====================================== */
+/* Ensure AOS elements are visible on mobile or when JS fails */
+@media (max-width: 767px) {
+    [data-aos] {
+        opacity: 1 !important;
+        transform: none !important;
+        visibility: visible !important;
+    }
+}
+
+/* Fallback: Show elements after page load even if AOS doesn't trigger */
+[data-aos] {
+    transition-property: opacity, transform;
+}
+
+/* Fix for elements that may not trigger on initial load */
+.aos-animate {
+    opacity: 1 !important;
+    transform: translateY(0) translateX(0) !important;
+}
+
+/* Ensure no-JS fallback - elements are visible when AOS is disabled */
+.no-js [data-aos],
+[data-aos].aos-init:not(.aos-animate) {
+    animation: aosReveal 0.1s 1s forwards;
+}
+
+@keyframes aosReveal {
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}

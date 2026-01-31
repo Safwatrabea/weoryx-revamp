@@ -2,31 +2,43 @@
    WeOryx - JavaScript Interactions
    ====================================== */
 
-document.addEventListener('DOMContentLoaded', function() {
-    
+document.addEventListener('DOMContentLoaded', function () {
+
     // Initialize AOS (Animate on Scroll)
     AOS.init({
-        duration: 800,
+        duration: 600,
         easing: 'ease-out',
         once: true,
-        offset: 50
+        offset: 0,
+        delay: 0,
+        anchorPlacement: 'top-bottom',
+        disable: window.innerWidth < 768 // Disable on mobile for better performance
     });
 
     // ===============================
-    // Header Scroll Effect
+    // Header Scroll Effect & Logo Switch
     // ===============================
     const header = document.getElementById('header');
+    const logoImg = document.querySelector('.logo-img');
     let lastScrollY = 0;
 
     function handleScroll() {
         const currentScrollY = window.scrollY;
-        
+
         if (currentScrollY > 50) {
             header.classList.add('scrolled');
+            // Switch to colored logo on scrolled/sticky header
+            if (logoImg) {
+                logoImg.src = 'images/logo.svg';
+            }
         } else {
             header.classList.remove('scrolled');
+            // Switch back to white logo on transparent header
+            if (logoImg) {
+                logoImg.src = 'images/logo-white.svg';
+            }
         }
-        
+
         lastScrollY = currentScrollY;
     }
 
@@ -145,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             portfolioItems.forEach(item => {
                 const category = item.getAttribute('data-category');
-                
+
                 if (filter === 'all' || category === filter) {
                     item.style.display = 'block';
                     item.style.animation = 'fadeIn 0.5s ease forwards';
@@ -208,7 +220,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
 
     if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+        contactForm.addEventListener('submit', function (e) {
             e.preventDefault();
 
             // Get form data
@@ -259,11 +271,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Reset input styles on focus
         contactForm.querySelectorAll('input, textarea').forEach(input => {
-            input.addEventListener('focus', function() {
+            input.addEventListener('focus', function () {
                 this.style.borderColor = '#0d5c5c';
             });
 
-            input.addEventListener('blur', function() {
+            input.addEventListener('blur', function () {
                 if (this.value.trim()) {
                     this.style.borderColor = '#e9ecef';
                 }
@@ -299,16 +311,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // Smooth Scroll for Anchor Links
     // ===============================
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href');
-            
+
             if (targetId === '#') return;
 
             const targetElement = document.querySelector(targetId);
-            
+
             if (targetElement) {
                 e.preventDefault();
-                
+
                 const headerHeight = header.offsetHeight;
                 const targetPosition = targetElement.offsetTop - headerHeight;
 
@@ -326,17 +338,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const newsletterForm = document.querySelector('.newsletter-form');
 
     if (newsletterForm) {
-        newsletterForm.addEventListener('submit', function(e) {
+        newsletterForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             const emailInput = this.querySelector('input[type="email"]');
             const submitBtn = this.querySelector('button');
-            
+
             if (emailInput.value.trim()) {
                 const originalIcon = submitBtn.innerHTML;
                 submitBtn.innerHTML = '<i class="fas fa-check"></i>';
                 emailInput.value = '';
-                
+
                 setTimeout(() => {
                     submitBtn.innerHTML = originalIcon;
                 }, 2000);
@@ -352,7 +364,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('scroll', () => {
         const scrolled = window.scrollY;
-        
+
         heroCircles.forEach((circle, index) => {
             const speed = (index + 1) * 0.1;
             circle.style.transform = `translate(${scrolled * speed}px, ${-scrolled * speed}px)`;
@@ -379,7 +391,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         function typeEffect() {
             const currentWord = words[wordIndex];
-            
+
             if (isDeleting) {
                 typingText.textContent = currentWord.substring(0, charIndex - 1);
                 charIndex--;
@@ -410,7 +422,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Image Lazy Loading
     // ===============================
     const lazyImages = document.querySelectorAll('img[data-src]');
-    
+
     if ('IntersectionObserver' in window) {
         const imageObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
@@ -430,13 +442,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Service Card Hover Effects
     // ===============================
     const serviceCards = document.querySelectorAll('.service-card');
-    
+
     serviceCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
+        card.addEventListener('mouseenter', function () {
             this.style.transform = 'translateY(-10px)';
         });
-        
-        card.addEventListener('mouseleave', function() {
+
+        card.addEventListener('mouseleave', function () {
             this.style.transform = 'translateY(0)';
         });
     });
