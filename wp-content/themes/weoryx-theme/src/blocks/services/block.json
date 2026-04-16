@@ -1,0 +1,32 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "weoryx/services",
+    "version": "1.0.0",
+    "title": "Services Section",
+    "category": "weoryx",
+    "icon": "clipboard",
+    "description": "Grid of services with title and descriptions.",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "What We Offer"
+        },
+        "services": {
+            "type": "array",
+            "default": [
+                {
+                    "title": "Web Development",
+                    "desc": "Custom websites tailored to your needs.",
+                    "icon": "fa-code"
+                },
+                {
+                    "title": "Digital Marketing",
+                    "desc": "Grow your brand with our expert marketing.",
+                    "icon": "fa-bullseye"
+                }
+            ]
+        }
+    },
+    "editorScript": "weoryx-services-block"
+}

@@ -1,0 +1,34 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "weoryx/hero",
+    "version": "1.0.0",
+    "title": "Hero Section",
+    "category": "weoryx",
+    "icon": "cover-image",
+    "description": "Main hero section with title, subtitle, and image.",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "default": "Digital Marketing Agency"
+        },
+        "subtitle": {
+            "type": "string",
+            "default": "DIGITAL MARKETING SOLUTION FOR YOUR BUSINESS"
+        },
+        "imageUrl": {
+            "type": "string"
+        },
+        "buttonText": {
+            "type": "string",
+            "default": "Contact Us"
+        },
+        "buttonUrl": {
+            "type": "string",
+            "default": "/contact"
+        }
+    },
+    "editorScript": "file:./index.js",
+    "editorStyle": "file:./index.css",
+    "style": "file:./style-index.css"
+}

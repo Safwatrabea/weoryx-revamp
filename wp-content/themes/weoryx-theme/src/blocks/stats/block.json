@@ -1,0 +1,28 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "weoryx/stats",
+    "version": "1.0.0",
+    "title": "Stats Section",
+    "category": "weoryx",
+    "icon": "chart-bar",
+    "description": "Counter statistics for the company.",
+    "attributes": {
+        "stats": {
+            "type": "array",
+            "default": [
+                {
+                    "label": "Happy Clients",
+                    "number": "500",
+                    "icon": "fa-users"
+                },
+                {
+                    "label": "Projects Done",
+                    "number": "1200",
+                    "icon": "fa-check"
+                }
+            ]
+        }
+    },
+    "editorScript": "weoryx-stats-block"
+}

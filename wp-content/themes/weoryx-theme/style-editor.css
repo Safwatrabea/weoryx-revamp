@@ -1,0 +1,17 @@
+/* Gutenberg Editor Styles */
+.editor-styles-wrapper {
+    font-family: 'Poppins', sans-serif;
+}
+
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3 {
+    font-family: 'Outfit', sans-serif;
+    color: #003049;
+}
+
+.editor-styles-wrapper .wp-block-button__link {
+    background-color: #f77f00;
+    border-radius: 50px;
+    padding: 12px 30px;
+}

@@ -1,0 +1,21 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "weoryx/about",
+    "title": "About Section",
+    "category": "weoryx",
+    "attributes": {
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "imageUrl": {
+            "type": "string"
+        }
+    },
+    "textdomain": "weoryx",
+    "editorScript": "file:../../index.js",
+    "render": "file:./render.php"
+}
